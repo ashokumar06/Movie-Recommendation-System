@@ -61,9 +61,10 @@ if st.button("Get Recommendations"):
     if select_movie:
         recommendations = get_recommendations(select_movie)
         st.subheader("Top Recommendations:")
-        cols = st.columns(10)
+        cols = st.columns(5)
         for idx, movie in enumerate(recommendations, 1):
-            col = cols[idx % 10]
+            col = cols[idx % 5]
+
             with col:
                 st.write(f"{idx}. { movie}")
                 try:
