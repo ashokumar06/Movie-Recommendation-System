@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-
+import time
 import requests
 
 
@@ -12,8 +12,6 @@ indices = pickle.load(open("indices.pkl", "rb"))
 df2 = pd.read_csv("data_movies.csv")[['original_title', 'overview','id']].dropna().reset_index(drop=True)
 movie_titles = list(indices.index)
 
-import time
-import requests
 
 def get_movie_posters(movie_id, retries=5, delay=5):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=3f0f2cdffa48725e4d15d8a037ec3e9b"

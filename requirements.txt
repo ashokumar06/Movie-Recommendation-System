@@ -1,2 +1,9 @@
 pandas
 numpy
+streamlit
+scikit-learn
+matplotlib
+seaborn
+scipy
+requests
+pickle
